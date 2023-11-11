@@ -59,3 +59,5 @@ router.delete('/:id', (req, res) => {
     .then((post) => res.status(200).json(post))
     .catch((err)=> res.status(400).json(err));
 });
+
+module.exports = router;

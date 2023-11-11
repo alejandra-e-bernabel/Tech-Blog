@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Comment extends Model {}
 
 //body, user_id of poster, date posted
-User.init(
+Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -21,7 +21,7 @@ User.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: id
+                key: 'id'
             }
         },
         //to track which post the comment belongs to

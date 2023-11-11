@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Post extends Model {}
 
 //title, body, user_id of poster, date posted, comments
-User.init(
+Post.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -25,7 +25,7 @@ User.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: id
+                key: 'id'
             }
         },
         // //to track any possible comments
