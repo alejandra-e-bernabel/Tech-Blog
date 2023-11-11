@@ -1,0 +1,38 @@
+{
+  "name": "config",
+  "version": "1.0.0",
+  "description": "A tech blog that leverages a cookie login functionality, handlebars, and an MVC folder structure.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandra-e-bernabel/Tech-Blog.git"
+  },
+  "keywords": [
+    "MVC",
+    "Express",
+    "SQL",
+    "Sequelize",
+    "MySQL2",
+    "Handlebars"
+  ],
+  "author": "Alejandra Bernabel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejandra-e-bernabel/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/alejandra-e-bernabel/Tech-Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.3",
+    "sequelize": "^6.34.0"
+  }
+}
