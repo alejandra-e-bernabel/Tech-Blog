@@ -28,14 +28,14 @@ User.init(
                 key: id
             }
         },
-        //to track any possible comments
-        comment_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'comment',
-                key: id
-            }
-        },
+        // //to track any possible comments
+        // comment_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'comment',
+        //         key: id
+        //     }
+        // },
     },
     {
         sequelize,

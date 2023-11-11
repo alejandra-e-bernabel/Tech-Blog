@@ -24,6 +24,14 @@ User.init(
                 key: id
             }
         },
+        //to track which post the comment belongs to
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
+                key: 'id',
+            }
+        }
     },
     {
         sequelize,
