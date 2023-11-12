@@ -1,0 +1,61 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Agbalumo', sans-serif;}
+
+
+body {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/space.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li {
+    padding: 10px;
+    padding-left: 40px;
+    font-size: x-large;
+}
+
+.nav-logo-container {
+    /* background-color: black; */
+}
+
+.nav-logo {
+    color: white;
+    padding: 15px;
+}
+
+.main-header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    /* padding: 100px; */
+    /* justify-content: space-around; */
+    color: white;
+    align-items: center;
+}
+
+.dashboard-header {
+    background-color: #1684AC;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: white;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
