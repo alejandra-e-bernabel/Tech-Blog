@@ -27,7 +27,13 @@ function dashboard() {
     document.location.replace('/');
 }
 
+function home() {
+    document.location.replace('/home');
+}
+
 document.getElementById('dashboard').addEventListener('click', dashboard);
+document.getElementById('home').addEventListener('click', home);
+
 
 document 
     .getElementById('login-form')

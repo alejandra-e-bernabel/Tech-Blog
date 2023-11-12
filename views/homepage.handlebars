@@ -2,3 +2,18 @@
 and the option to add a new post --}}
 
 <h2>Your Posts</h2>
+
+<section class="container">
+    <h3>Your Posts</h3>
+    {{#if logged_in}}
+    <section class="flex-row justify center">
+        {{#each posts}}
+            <h3>{{title}}</h3>
+            <p>{{body}}</p>
+        {{/each}}
+    </section>
+</section>
+{{else}}
+<p>You must be logged in to view your posts</p>
+<a class = 'btn' href="/login">Log in</a>
+{{/if}}
