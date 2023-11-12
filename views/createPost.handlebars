@@ -1,2 +1,24 @@
 {{!-- html for creating a new post --}}
 
+{{!-- //logged_in variable returns true/false if logged in or not
+//user_id is the id of the logged in user
+//users is the User object
+//posts is the Post object --}}
+
+<form id='newPost-form' class="form">
+    <div class="form-group">
+        <label for="newPost-title">Title:</label>
+        <input class="form-input" type="text" id="newPost-title">
+    </div>
+    <div class="form-group">
+        <label for="newPost-body">Content:</label>
+        <input class="form-input" type="text" id="newPost-body">
+    </div>
+
+    <div class="form-group">
+        <a id= "newPost-submit" class="btn btn-info">Post</a>
+    </div>
+
+</form>
+
+<script src="/js/createPost.js"></script>

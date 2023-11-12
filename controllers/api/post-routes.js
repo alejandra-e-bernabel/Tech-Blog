@@ -29,10 +29,23 @@ router.get('/:id', (req, res) => {
     });
 });
 
-//create new post
-
+//create new post (for seeding purposes)
 router.post('/', (req, res) => {
+
     Post.create(req.body)
+        .then((post) => res.status(200).json(post))
+        .catch((err) => res.status(400).json(err));
+});
+
+//used in creating a new post on through the front end
+//create a new post and assign user_id as whoever is logged in and making the post
+router.post('/createPost', (req, res) => {
+
+    const user_id = req.session.user_id;
+
+    const newPost = {...req.body, user_id};
+
+    Post.create(newPost)
         .then((post) => res.status(200).json(post))
         .catch((err) => res.status(400).json(err));
 });

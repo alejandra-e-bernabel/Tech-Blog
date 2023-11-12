@@ -44,8 +44,7 @@ router.get('/signup', (req, res) => {
 });
 
 
-//this needs to be fixed so that it only outputs data from a specific user
-//currently it is printing everything from all users
+//displays only posts made by logged in user
 router.get('/home', async (req, res) => {
     try{
         const userData = await User.findAll({
@@ -63,6 +62,37 @@ router.get('/home', async (req, res) => {
 
         
         res.render('homepage', {
+            users,
+            posts,
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
+        });   
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+//displays new post page
+router.get('/newPost', async (req,res)=> {
+    try{
+        const userData = await User.findAll({
+            attributes: {exclude: ['password']},
+            other: [['name'], 'ASC'],
+        });
+
+        const users = userData.map((project) => project.get({ plain: true }));
+        
+        const postData = await Post.findAll({
+            // where: {user_id: userData.map(user => user.id)},
+            other: [['createdAt'], 'DESC']
+        });
+        const posts = postData.map((project) => project.get({plain: true}));
+
+        //logged_in variable returns true/false if logged in or not
+        //user_id is the id of the logged in user
+        //users is the User object
+        //posts is the Post object
+        res.render('createPost', {
             users,
             posts,
             logged_in: req.session.logged_in,
