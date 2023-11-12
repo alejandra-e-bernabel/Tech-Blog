@@ -3,7 +3,7 @@
 
 <section class="container">
     <h3>All Posts</h3>
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <section class="flex-row justify center">
         {{#each posts}}
             <h3>{{title}}</h3>
@@ -12,5 +12,6 @@
     </section>
 </section>
 {{else}}
-<a href="/login">You must be logged in to view all posts</a>
+<p>You must be logged in to view all posts</p>
+<a class = 'btn' href="/login">Log in</a>
 {{/if}}
