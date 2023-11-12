@@ -8,11 +8,16 @@ and the option to add a new post --}}
     {{#if logged_in}}
     <section class="flex-row justify center">
         {{#each posts}}
+            {{#if (eq user_id ../user_id)}}
             <h3>{{title}}</h3>
             <p>{{body}}</p>
+            {{else}}
+            {{/if}}
         {{/each}}
     </section>
 </section>
+
+<button href="/createPost" class="btn btn-warning">+ New post</button>
 {{else}}
 <p>You must be logged in to view your posts</p>
 <a class = 'btn' href="/login">Log in</a>

@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Post } = require('../../models');
 
 //the `/api/users` endpoint
 
 // to get all users
 
 router.get('/', (req, res) => {
-    User.findAll()
+    User.findAll({ include: [Post]})
         .then((users) => res.json(users))
         .catch((err) => {
             console.log(err);
@@ -20,7 +20,8 @@ router.get('/:id', (req, res) => {
     User.findOne({
         where: {
             id: req.params.id,
-        }
+        },
+        include: [Post]
     })
         .then((users) => res.json(users))
         .catch((err) => {
