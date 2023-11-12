@@ -16,11 +16,28 @@
                 <li>
                     Home
                 </li>
-                <li>
+                <li id="dashboard">
                     Dashboard
                 </li>
                 <li id="logout">
                     Log out
+                </li>
+            </ul>
+        </nav>
+        {{else}}
+        <nav>
+            <ul>
+                <li id="dashboard">
+                    Dashboard
+                </li>
+                <li>
+                    Home
+                </li>
+                <li id="login">
+                    Log in
+                </li>
+                <li id = 'signup'>
+                    Create account
                 </li>
             </ul>
         </nav>
@@ -33,6 +50,9 @@
 
     {{#if logged_in}}
     <script src = '/js/logout.js'></script>
+
+    {{else}}
+    <script src = '/js/navigation.js'></script>
     {{/if}}
 </body>
 </html>
