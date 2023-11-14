@@ -1,17 +1,21 @@
 <h2 class="signup-header">Create Your Tech-Blog Account</h2>
 
 <form id="signup-form" class="form signup-form">
+    <p id="elementsMissingWarning" class="signupWarning hidden">Please fill out all elements of the form</p>
     <div class="form-group">
         <label class="formLabel" for="username-signup">Username:</label>
         <input class="form-control form-input" type="text" id="username-signup">
     </div>
     <br>
+    <p id="emailVerificationWarning" class="signupWarning hidden">Provided email is not valid</p>
+    <p id="repeatedEmailWarning" class="signupWarning hidden">Email already exists in database. Try a different email or <a href='/login'><u>log in</u></a></p>
     <div class="form-group">
         <label class="formLabel" for="email-signup">Email:</label>
         <input class="form-control form-input" type="text" id="email-signup">
     </div>
     <br>
     <p id= 'noPasswordMatchEl' class="signupWarning hidden">Passwords do not match, please try again</p>
+    <p id="passwordLengthError" class = 'signupWarning hidden'>Password must be at least 8 characters in length</p>
     <div class="form-group">
         <label class="formLabel" for="password-signup">Password:</label>
         <input class="form-control form-input" type="password" id="password-signup">

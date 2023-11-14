@@ -1,24 +1,31 @@
 {{!-- shows any blog posts already created ( by this specific account)
 and the option to add a new post --}}
 
-<h2>Your Posts</h2>
+<h2 class="homepage-header">Your Posts</h2>
 
-<section class="container">
-    <h3>Your Posts</h3>
+<section class="container homepage-body">
     {{#if logged_in}}
+
+    <div class="homepageButton-container">
+        <a href="/newPost" class="button btn">+ New post</a>
+    </div>
     <section class="flex-row justify center">
         {{#each posts}}
-            {{#if (eq user_id ../user_id)}}
+        {{#if (eq user_id ../user_id)}}
+        <div class="post-container">
             <h3>{{title}}</h3>
             <p>{{body}}</p>
-            {{else}}
-            {{/if}}
+        </div>
+
+        {{else}}
+        {{/if}}
         {{/each}}
     </section>
 </section>
 
-<a href="/newPost" class="btn btn-warning">+ New post</a>
 {{else}}
-<p>You must be logged in to view your posts</p>
-<a class = 'btn' href="/login">Log in</a>
+<p class="loginText">You must be logged in to view your posts</p>
+<div class="homepageButton-container">
+    <p><a class='button btn' href="/login">Log in</a></button></p>
+</div>
 {{/if}}

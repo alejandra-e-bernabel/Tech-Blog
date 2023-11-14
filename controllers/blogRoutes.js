@@ -12,7 +12,8 @@ router.get('/', async(req, res) => {
         const users = userData.map((project) => project.get({ plain: true }));
         
         const postData = await Post.findAll({
-            other: [['createdAt'], 'DESC']
+            other: [['createdAt'], 'DESC'],
+            include: [User]
         });
         const posts = postData.map((project) => project.get({plain: true}));
 
@@ -101,7 +102,9 @@ router.get('/newPost', async (req,res)=> {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+
 
 
 module.exports = router;

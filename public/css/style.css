@@ -58,7 +58,7 @@ li {
     justify-content: center;
 } */
 
-.login-header, .dashboard-header, .signup-header {
+.login-header, .dashboard-header, .signup-header, .homepage-header, .newPost-header {
     background-color: #8c37b4;
     color: white;
     display: flex;
@@ -77,10 +77,11 @@ main {
     background-color: black;
     color: white;
     border-radius: 10px;
+    margin-bottom: 30px;
 
 }
 
-.dashboard-body {
+.dashboard-body, .homepage-body, .newPost-body {
     padding: 30px
 }
 
@@ -89,7 +90,7 @@ a {
     text-decoration: none;
 }
 
-.loginButton-container, .signupButton-container {
+.loginButton-container, .signupButton-container, .homepageButton-container, .newPostButton-container, .dashboardButon-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -109,6 +110,12 @@ a {
     font-size: large;
 }
 
+.viewPost-button {
+    background-color: #0e5dad;
+    color: white;
+    font-size: large;
+}
+
 .post-container {
     /* background-color: #FD5E8B; */
     /* padding-bottom: 10px; */
@@ -116,4 +123,20 @@ a {
     margin-top: 10px;
     /* border-style: solid; */
     border-bottom: 3px solid #FD5E8B;
+}
+
+.loginText {
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+}
+
+.titleAndInfo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postInfo {
+    color: gainsboro;
 }

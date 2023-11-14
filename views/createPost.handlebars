@@ -4,26 +4,34 @@
 //user_id is the id of the logged in user
 //users is the User object
 //posts is the Post object --}}
-<h3>Create New Post</h3>
+<h3 class="newPost-header">Create New Post</h3>
 
-{{#if logged_in}}
-<form id='newPost-form' class="form">
-    <div class="form-group">
-        <label for="newPost-title">Title:</label>
-        <input class="form-input" type="text" id="newPost-title">
-    </div>
-    <div class="form-group">
-        <label for="newPost-body">Content:</label>
-        <input class="form-input" type="text" id="newPost-body">
-    </div>
+<section class="newPost-body">
 
-    <div class="form-group">
-        <a id= "newPost-submit" class="btn btn-info">Post</a>
-    </div>
-{{else}}
-<p>You must be logged in to create a new post</p>
-<a class = 'btn' href="/login">Log in</a>
-</form>
+    {{#if logged_in}}
+    <form id='newPost-form' class="form">
+        <div class="form-group">
+            <label for="newPost-title">Title:</label>
+            <input class="form-input form-control" type="text" id="newPost-title">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="newPost-body">Content:</label>
+            <textarea class="form-input form-control" type="text" id="newPost-body"></textarea>
+        </div>
+        <br>
+        <div class="form-group newPostButton-container">
+            <a id="newPost-submit" class="button btn">Post</a>
+        </div>
+        {{else}}
+        <p class="loginText">You must be logged in to create a new post</p>
+        <div class="newPostButton-container">
+            <a class='button btn' href="/login">Log in</a>
+        </div>
+        <br>
+    </form>
+</section>
+
 {{/if}}
 
 <script src="/js/createPost.js"></script>
