@@ -19,7 +19,7 @@ async function handleNewPostCreation(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/home');
+            document.location.replace('/');
             // alert('post was made');
         } else {
             alert('Failed to create new post')

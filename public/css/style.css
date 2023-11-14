@@ -8,6 +8,7 @@
 
 body {
     background-size: cover;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     background-image: url(../images/space.jpg);
@@ -24,6 +25,17 @@ li {
     padding: 10px;
     padding-left: 40px;
     font-size: x-large;
+}
+
+.align-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #8c37b4;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px
 }
 
 .hidden {
@@ -58,7 +70,10 @@ li {
     justify-content: center;
 } */
 
-.login-header, .dashboard-header, .signup-header, .homepage-header, .newPost-header, .post-header {
+.login-header, .dashboard-header, 
+.signup-header, .homepage-header, 
+.newPost-header, .post-header,
+.editPost-header {
     background-color: #8c37b4;
     color: white;
     display: flex;
@@ -117,7 +132,7 @@ a:link, a:visited {
     gap: 20px;
 }
 
-.login-form, .signup-form {
+.login-form, .signup-form, .editPost-form {
     padding: 20px;
 }
 

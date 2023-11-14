@@ -1,7 +1,10 @@
 {{!-- will display a specific post and allows for user to add a comment to the post --}}
 
 {{#if logged_in}}
-<h3 class="post-header">{{post.title}}</h3>
+<div class=" align-items">
+    <h3>{{post.title}}</h3>
+    <p>{{post.user.name}} on {{format_date post.createdAt "yyyy-mm-dd"}}</p>
+</div>
 
 <section class="viewPost-body">
 

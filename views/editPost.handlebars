@@ -1,18 +1,18 @@
 {{!-- this displays a post made by currently logged in user
 and gives the option to update or delete the post. --}}
 
-<h3>Edit Post</h3>
+<h2 class="editPost-header">Edit Post</h2>
 {{#if logged_in}}
 
 <section class="newPost-body">
-    <form id='editPost-form' class="form">
+    <form id='editPost-form' class="form editPost-form">
         <div class="form-group">
-            <label for="editPost-title">Title:</label>
+            <label for="editPost-title" class="formLabel">Title:</label>
             <textarea class="form-input form-control" type="text" id="editPost-title">{{post.title}}</textarea>
         </div>
         <br>
         <div class="form-group">
-            <label for="editPost-body">Content:</label>
+            <label for="editPost-body" class="formLabel">Content:</label>
             <textarea class="form-input form-control" type="text" id="editPost-body">{{post.body}}</textarea>
         </div>
         <br>

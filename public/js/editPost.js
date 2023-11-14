@@ -23,7 +23,7 @@ async function handlePostEdit () {
         });
 
         if (response.ok) {
-            document.location.replace('/home');
+            document.location.replace('/');
         } else {
             alert('Failed to update post');
         };
@@ -45,7 +45,7 @@ async function handlePostDelete() {
     });
 
     if (response.ok) {
-        document.location.replace('/home');
+        document.location.replace('/');
     } else {
         alert('Failed to delete post');
     };

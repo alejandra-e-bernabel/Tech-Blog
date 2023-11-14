@@ -5,23 +5,24 @@ and the option to add a new post --}}
 
 <section class="container homepage-body">
     {{#if logged_in}}
-
-    <div class="homepageButton-container">
-        <a href="/newPost" class="button btn">+ New post</a>
-    </div>
     <section class="flex-row justify center">
-        {{#each posts}}
+        {{#each (reverse posts)}}
         <a href="/editPost/{{id}}">
             {{#if (eq user_id ../user_id)}}
             <div class="post-container">
-                <h3>{{title}}</h3>
-                <p>{{body}}</p>
+                <div>
+                    <h3>{{title}}</h3>
+                    <p>Posted on: {{format_date createdAt "yyyy-mm-dd"}}   ||   Last updated on: {{format_date updatedAt "yyyy-mm-dd"}}</p>
+                </div>
             </div>
 
             {{else}}
             {{/if}}
         </a>
         {{/each}}
+        <div class="homepageButton-container">
+            <a href="/newPost" class="button btn">+ New post</a>
+        </div>
     </section>
 </section>
 

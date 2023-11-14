@@ -4,7 +4,7 @@
 <section class="dashboard-body container">
     {{!-- {{#if logged_in}} --}}
     <section class="flex-row justify center">
-        {{#each posts}}
+        {{#each (reverse posts)}}
         <a href="/viewPost/{{id}}">
             <div class="post-container">
                 <div class="titleAndInfo-container">

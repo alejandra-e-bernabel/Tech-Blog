@@ -11,5 +11,7 @@ module.exports = {
       return false;
     }
 
-  }
+  },
+
+  reverse: function(array) {return array.reverse()}
 }
