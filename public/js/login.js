@@ -16,7 +16,13 @@ const loginFormHandler = async (event) => {
             document.location.replace('/');
         } else {
             //html response showing user that the login was not successful for whatever reason
-            alert('Failed to log in');
+            const passwordEmailCombinationWarning = document.getElementById('passwordEmailCombinationWarning');
+            passwordEmailCombinationWarning.classList.remove("hidden");
+                window.setTimeout(function () {
+                    passwordEmailCombinationWarning.classList.add("hidden");
+                }, 10000);
+            
+            // alert('Failed to log in');
         }
     }
 };

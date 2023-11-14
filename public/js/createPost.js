@@ -1,5 +1,3 @@
-//this might access the userID:
-
 async function handleNewPostCreation(event) {
 
     const postTitle = document.getElementById('newPost-title').value;
