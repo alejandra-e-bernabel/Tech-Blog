@@ -5,12 +5,12 @@
 
 My goal for this project was to integrate all the concepts that I've learned in the past few months. Among these skills, perhaps the toughest has been figuring out the way that front end and back end work together in the context of routes. Since this proejct also was my first time using handlebars,  there was the added challenge of learning how Handlebars accessed information from the front end, how to send this handlebars rendered data to my javascript files, then how to access my backend routes. Although challenging, I believe the hours poured into this project have let me to understand these concepts much more deeply that I did before.
 
-![Log in to view posts](image.png)
-![Log in](image-1.png)
-![Sign up](image-2.png)
-![Dashboard](image-3.png)
-![Comments on a post](image-4.png)
-![Editing a post](image-5.png)
+![Log in to view posts](/public/images/image.png)
+![Log in](/public/images/image-1.png)
+![Sign up](/public/images/image-2.png)
+![Dashboard](/public/images/image-3.png)
+![Comments on a post](/public/images/image-4.png)
+![Editing a post](/public/images/image-5.png)
 
 ## Table of Contents
 
