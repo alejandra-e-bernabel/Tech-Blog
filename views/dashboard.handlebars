@@ -1,17 +1,18 @@
 {{!-- shows all blog posts by all users --}}
 <h2 class="dashboard-header">Dashboard</h2>
 
-<section class="container">
-    <h3>All Posts</h3>
+<section class="dashboard-body container">
     {{!-- {{#if logged_in}} --}}
     <section class="flex-row justify center">
         {{#each posts}}
+        <div class="post-container">
             <h3>{{title}}</h3>
             <p>{{body}}</p>
+        </div>
         {{/each}}
     </section>
 </section>
 {{!-- {{else}}
 <p>You must be logged in to view all posts</p>
-<a class = 'btn' href="/login">Log in</a>
+<a class='btn' href="/login">Log in</a>
 {{/if}} --}}

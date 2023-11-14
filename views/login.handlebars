@@ -1,21 +1,26 @@
-<h2>Log into Tech Blog</h2>
+<h2 class="login-header">Log into Tech Blog</h2>
 
-<form id = "login-form" class = "form login-form">
-    <div class = "form-group">
-        <label for= "email-login">Email:</label>
-        <input class="form-input" type = "text" id = "email-login">
+<form id="login-form" class="form login-form">
+    <div class="form-group">
+        <label class= "formLabel" for="email-login">Email:</label>
+        <input class="form-input form-control" type="text" id="email-login">
     </div>
-    <div class = "form-group">
-        <label for= "password-login">Password:</label>
-        <input class="form-input" type = "password" id = "password-login">
+    <br>
+    <div class="form-group">
+        <label class="formLabel" for="password-login">Password:</label>
+        <input class="form-input form-control" type="password" id="password-login">
+    <br>
     </div>
-    <div class = "form-group">
-        <button class = "btn btn-primary" type = "submit"> Log me in!</button>
+    <div class= "loginButton-container">
+        <div class="form-group">
+            <button class="btn button" type="submit"> Log me in!</button>
+        </div>
+        <div>
+            <button id="signupButton" class="button btn">Sign up instead</button>
+        </div>
     </div>
 </form>
 
-<div>
-        <button id = "signupButton" class = "btn btn-primary">Sign up instead</button>
-</div>
+
 
 <script src="/js/login.js"></script>

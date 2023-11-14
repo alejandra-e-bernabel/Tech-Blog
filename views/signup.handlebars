@@ -1,26 +1,39 @@
-<h2>Create Your Tech-Blog Account</h2>
+<h2 class="signup-header">Create Your Tech-Blog Account</h2>
 
-<form id = "signup-form" class = "form">
-     <div class = "form-group">
-        <label for= "username-signup">Username:</label>
-        <input class="form-input" type = "text" id = "username-signup">
+<form id="signup-form" class="form signup-form">
+    <div class="form-group">
+        <label class="formLabel" for="username-signup">Username:</label>
+        <input class="form-control form-input" type="text" id="username-signup">
     </div>
-    <div class = "form-group">
-        <label for= "email-signup">Email:</label>
-        <input class="form-input" type = "text" id = "email-signup">
+    <br>
+    <div class="form-group">
+        <label class="formLabel" for="email-signup">Email:</label>
+        <input class="form-control form-input" type="text" id="email-signup">
     </div>
-    <div class = "form-group">
-        <label for= "password-signup">Password:</label>
-        <input class="form-input" type = "password" id = "password-signup">
+    <br>
+    <p id= 'noPasswordMatchEl' class="signupWarning hidden">Passwords do not match, please try again</p>
+    <div class="form-group">
+        <label class="formLabel" for="password-signup">Password:</label>
+        <input class="form-control form-input" type="password" id="password-signup">
     </div>
-    <div class = "form-group">
-        <button class = "btn btn-primary" type = "submit"> Sign me up!</button>
+    <br>
+    <div class="form-group">
+        <label class="formLabel" for="password-confirm">Confirm Password:</label>
+        <input class="form-control form-input" type="password" id="password-confirm">
     </div>
+    <br>
+    <div class="signupButton-container">
+        <div class="form-group">
+            <button class="button btn" type="submit"> Sign me up!</button>
+        </div>
+        <div>
+            <button id="loginButton" class="button btn">Log in instead</button>
+        </div>
+    </div>
+
 </form>
 
-<div>
-        <button id = "loginButton" class = "btn btn-primary">Log in instead</button>
-</div>
+
 
 
 <script src="./js/signup.js"></script>

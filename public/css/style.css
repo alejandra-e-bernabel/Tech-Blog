@@ -26,8 +26,14 @@ li {
     font-size: x-large;
 }
 
-.nav-logo-container {
-    /* background-color: black; */
+.hidden {
+    display: none;
+}
+
+.loginWarning, .signupWarning {
+    color: red;
+    /* justify-content: center; */
+    font-size: large;
 }
 
 .nav-logo {
@@ -45,11 +51,21 @@ li {
     align-items: center;
 }
 
-.dashboard-header {
-    background-color: #1684AC;
+/* .dashboard-header {
+    background-color: #8c37b4;
     color: white;
     display: flex;
     justify-content: center;
+} */
+
+.login-header, .dashboard-header, .signup-header {
+    background-color: #8c37b4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px
 }
 
 main {
@@ -58,4 +74,46 @@ main {
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+}
+
+.dashboard-body {
+    padding: 30px
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.loginButton-container, .signupButton-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-form, .signup-form {
+    padding: 20px;
+}
+
+.formLabel {
+    font-size: larger;
+}
+
+.button {
+    background-color: #FD5E8B;
+    color: white;
+    font-size: large;
+}
+
+.post-container {
+    /* background-color: #FD5E8B; */
+    /* padding-bottom: 10px; */
+    margin-bottom: 15px;
+    margin-top: 10px;
+    /* border-style: solid; */
+    border-bottom: 3px solid #FD5E8B;
 }
