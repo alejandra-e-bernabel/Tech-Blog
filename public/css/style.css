@@ -30,7 +30,7 @@ li {
     display: none;
 }
 
-.loginWarning, .signupWarning {
+.loginWarning, .signupWarning, .commentWarning {
     color: red;
     /* justify-content: center; */
     font-size: large;
@@ -58,7 +58,7 @@ li {
     justify-content: center;
 } */
 
-.login-header, .dashboard-header, .signup-header, .homepage-header, .newPost-header {
+.login-header, .dashboard-header, .signup-header, .homepage-header, .newPost-header, .post-header {
     background-color: #8c37b4;
     color: white;
     display: flex;
@@ -66,6 +66,19 @@ li {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 10px
+}
+
+.post-subheader {
+    background-color: #bf8ad8;
+    padding: 10px;
+    text-align: center;
+    /* color: black; */
+    text-shadow: 2px 2px #8c37b4;
+}
+
+.postComment {
+    text-align: right;
+    color: gainsboro
 }
 
 main {
@@ -81,7 +94,7 @@ main {
 
 }
 
-.dashboard-body, .homepage-body, .newPost-body {
+.dashboard-body, .homepage-body, .newPost-body, .viewPost-body {
     padding: 30px
 }
 
@@ -95,7 +108,7 @@ a:link, a:visited {
     color: inherit;
   }
 
-.loginButton-container, .signupButton-container, .homepageButton-container, .newPostButton-container, .dashboardButon-container {
+.loginButton-container, .signupButton-container, .homepageButton-container, .newPostButton-container, .dashboardButon-container, .viewPostButton-contatiner {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -121,7 +134,7 @@ a:link, a:visited {
     font-size: large;
 }
 
-.post-container {
+.post-container, .comment-container {
     /* background-color: #FD5E8B; */
     /* padding-bottom: 10px; */
     margin-bottom: 15px;
@@ -144,4 +157,8 @@ a:link, a:visited {
 
 .postInfo {
     color: gainsboro;
+}
+
+.post-body {
+    font-size: large;
 }

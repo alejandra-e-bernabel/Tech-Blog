@@ -1,28 +1,45 @@
 {{!-- will display a specific post and allows for user to add a comment to the post --}}
+
 {{#if logged_in}}
-<h3>{{post.title}}</h3>
-<p>{{post.body}}</p>
-<br>
-<h5>Comments</h5>
-{{#each post.comments}}
-<p>{{body}}</p>
-<p>Commented by: {{user.name}} on {{format_date createdAt "yyyy-mm-dd"}}</p>
-{{/each}}
-<button class="button btn">Add comment</button>
+<h3 class="post-header">{{post.title}}</h3>
 
+<section class="viewPost-body">
 
-<form id="newComment-form" class="newComment-form">
-    <div class="form-group">
-        <label for="newComment-body">Content:</label>
-        <textarea class="form-input form-control" type="text" id="newComment-body"></textarea>
+    <p class="post-body">{{post.body}}</p>
+    <br>
+    <h5 class="post-subheader">Comments</h5>
+    {{#each post.comments}}
+    <div class="comment-container">
+        <p>{{body}}</p>
+        {{#if user.name}}
+        <p class="postComment">-- {{user.name}} on {{format_date createdAt "yyyy-mm-dd"}}</p>
+        {{else}}
+        <p class="postComment">-- Anonymous on {{format_date createdAt "yyyy-mm-dd"}}</p>
+        {{/if}}
     </div>
-    <a id="newComment-submit" class="button btn">Post comment</a>
-</form>
+    {{/each}}
+    <div class="viewPostButton-contatiner">
+        <button id="addComment-button" class="button btn">Add comment</button>
+    </div>
 
-<script src="/js/addComment.js"></script>
-{{else}}
-<p class="loginText">You must be logged in to view or comment on this post.</p>
-<div class="homepageButton-container">
-    <p><a class='button btn' href="/login">Log in</a></button></p>
-</div>
-{{/if}}
+    <p id="noCommentBodyWarning" class="hidden commentWarning">Comment must contain words.</p>
+    <form id="newComment-form" class="newComment-form">
+        <div class="form-group">
+            <label for="newComment-body">Content:</label>
+            <textarea class="form-input form-control" type="text" id="newComment-body"></textarea>
+        </div>
+        <br>
+        <div class="viewPostButton-contatiner">
+            <a id="newComment-submit" class="button btn">Post comment</a>
+            <a id="newComment-cancel" class="button btn">Cancel</a>
+        </div>
+    </form>
+
+    <script src="/js/addComment.js"></script>
+    {{else}}
+    <p class="loginText">You must be logged in to view or comment on this post.</p>
+    <div class="homepageButton-container">
+        <p><a class='button btn' href="/login">Log in</a></button></p>
+    </div>
+    {{/if}}
+</section>
