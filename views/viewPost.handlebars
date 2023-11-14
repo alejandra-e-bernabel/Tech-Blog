@@ -1,13 +1,20 @@
 {{!-- will display a specific post and allows for user to add a comment to the post --}}
+{{#if logged_in}}
 <h3>{{post.title}}</h3>
 <p>{{post.body}}</p>
+<br>
+<h5>Comments</h5>
+{{#each post.comments}}
+<p>{{body}}</p>
+<p>Commented by: {{user.name}} on {{format_date createdAt "yyyy-mm-dd"}}</p>
+{{/each}}
 <button class="button btn">Add comment</button>
 
-{{#if logged_in}}
+
 <form id="newComment-form" class="newComment-form">
     <div class="form-group">
-            <label for="newComment-body">Content:</label>
-            <textarea class="form-input form-control" type="text" id="newComment-body"></textarea>
+        <label for="newComment-body">Content:</label>
+        <textarea class="form-input form-control" type="text" id="newComment-body"></textarea>
     </div>
     <a id="newComment-submit" class="button btn">Post comment</a>
 </form>
