@@ -3,9 +3,6 @@ async function handleNewPostCreation(event) {
     const postTitle = document.getElementById('newPost-title').value;
     const postBody = document.getElementById('newPost-body').value;
     
-
-    // event.preventDefault();
-
     console.log('new post will be created');
     console.log(postBody + " " + postTitle + " ")
 

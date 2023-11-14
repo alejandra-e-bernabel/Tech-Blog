@@ -117,6 +117,23 @@ router.get('/viewPost/:id', async (req,res)=> {
     };
 });
 
+router.get('/editPost/:id', async (req,res) => {
+    // if (req.session.logged_in) {
+        try {
+            const postData = await Post.findByPk (req.params.id);
+            const post = postData.get({plain: true});
+            res.render('editPost', {
+                post, 
+                logged_in: req.session.logged_in
+            });
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    // } else {
+    //     res.render('login');
+    // }
+});
+
 
 
 

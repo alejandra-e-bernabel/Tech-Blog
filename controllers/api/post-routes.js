@@ -68,6 +68,31 @@ router.put('/:id', (req, res) => {
     .catch((err)=> res.status(400).json(err));
 });
 
+//update a post from the frontend
+//checks if the user attempting to update the post is the same as the person who edited the post
+router.put('/updatePost/:id', async (req, res) => {
+    try {
+        // Find the Post by its id
+        const post = await Post.findByPk(req.params.id);
+
+        if (req.session.user_id === post.user_id) {
+            // Update the post
+            const updatedPost = await Post.update(req.body, {
+                where: {
+                    id: req.params.id,
+                },
+            });
+            res.status(200).json(updatedPost);
+        } else {
+            // User does not match, return authorization error
+            res.status(403).json({ error: "You are not authorized to update this post." });
+        }
+    } catch (err) {
+        // Error finding the post
+        res.status(404).json(err);
+    }
+});
+
 //delete a post
 router.delete('/:id', (req, res) => {
     Post.destroy({

@@ -11,14 +11,16 @@ and the option to add a new post --}}
     </div>
     <section class="flex-row justify center">
         {{#each posts}}
-        {{#if (eq user_id ../user_id)}}
-        <div class="post-container">
-            <h3>{{title}}</h3>
-            <p>{{body}}</p>
-        </div>
+        <a href="/editPost/{{id}}">
+            {{#if (eq user_id ../user_id)}}
+            <div class="post-container">
+                <h3>{{title}}</h3>
+                <p>{{body}}</p>
+            </div>
 
-        {{else}}
-        {{/if}}
+            {{else}}
+            {{/if}}
+        </a>
         {{/each}}
     </section>
 </section>

@@ -1,0 +1,40 @@
+{{!-- this displays a post made by currently logged in user
+and gives the option to update or delete the post. --}}
+
+<h3>Edit Post</h3>
+{{#if logged_in}}
+
+<section class="newPost-body">
+    <form id='editPost-form' class="form">
+        <div class="form-group">
+            <label for="editPost-title">Title:</label>
+            <textarea class="form-input form-control" type="text" id="editPost-title">{{post.title}}</textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="editPost-body">Content:</label>
+            <textarea class="form-input form-control" type="text" id="editPost-body">{{post.body}}</textarea>
+        </div>
+        <br>
+        <div class="form-group editPostButton-container">
+            <a id="editPost-submit" class="button btn">Update Post</a>
+            <a id="editPost-delete" class='button btn'>Delete Post</a>
+        </div>
+        <br>
+        <div class="form-group editPostButton-container">
+            <a id="editPost-cancel" class='button btn'>Cancel</a>
+        </div>
+
+        <br>
+    </form>
+</section>
+
+
+{{else}}
+<p class="loginText">You must be logged in to edit this post.</p>
+<div class="homepageButton-container">
+    <p><a class='button btn' href="/login">Log in</a></button></p>
+</div>
+{{/if}}
+
+<script src="/js/editPost.js"></script>

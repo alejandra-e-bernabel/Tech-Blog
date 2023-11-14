@@ -108,7 +108,10 @@ a:link, a:visited {
     color: inherit;
   }
 
-.loginButton-container, .signupButton-container, .homepageButton-container, .newPostButton-container, .dashboardButon-container, .viewPostButton-contatiner {
+.loginButton-container, .signupButton-container, 
+.homepageButton-container, .newPostButton-container, 
+.dashboardButon-container, .viewPostButton-contatiner, 
+.editPostButton-container {
     display: flex;
     justify-content: center;
     gap: 20px;
