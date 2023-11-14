@@ -37,6 +37,17 @@ router.post('/', (req, res) => {
         .catch((err) => res.status(400).json(err));
 });
 
+//create a new comment from the website. Session user needs to be grabbed before creating post.
+router.post('/createComment', (req,res) => {
+    const user_id = req.session.user_id;
+
+    const newComment = {...req.body, user_id};
+    
+    Comment.create(newComment)
+        .then((post) => res.status(200).json(post))
+        .catch((err) => res.status(400).json(err));
+});
+
 
 //update a comment
 router.put('/:id', (req, res) => {

@@ -5,17 +5,19 @@
     {{!-- {{#if logged_in}} --}}
     <section class="flex-row justify center">
         {{#each posts}}
-        <div class="post-container">
-            <div class="titleAndInfo-container">
-                <h3>{{title}}</h3>
-                <p class="postInfo"> Posted by {{user.name}} on {{format_date createdAt "yyyy-mm-dd"}}</p>
+        <a href="/viewPost/{{id}}">
+            <div class="post-container">
+                <div class="titleAndInfo-container">
+                    <h3>{{title}}</h3>
+                    <p class="postInfo"> Posted by {{user.name}} on {{format_date createdAt "yyyy-mm-dd"}}</p>
+                </div>
+                <p>{{body}}</p>
+                <div class="dashboardButon-container">
+                    <button class="viewPost-button btn">View Post</button>
+                </div>
+                <br>
             </div>
-            <p>{{body}}</p>
-            <div class="dashboardButon-container">
-            <button class="viewPost-button btn">View Post</button>
-            </div>
-            <br>
-        </div>
+        </a>
         {{/each}}
     </section>
 </section>

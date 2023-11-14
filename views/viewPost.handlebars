@@ -1,1 +1,21 @@
 {{!-- will display a specific post and allows for user to add a comment to the post --}}
+<h3>{{post.title}}</h3>
+<p>{{post.body}}</p>
+<button class="button btn">Add comment</button>
+
+{{#if logged_in}}
+<form id="newComment-form" class="newComment-form">
+    <div class="form-group">
+            <label for="newComment-body">Content:</label>
+            <textarea class="form-input form-control" type="text" id="newComment-body"></textarea>
+    </div>
+    <a id="newComment-submit" class="button btn">Post comment</a>
+</form>
+
+<script src="/js/addComment.js"></script>
+{{else}}
+<p class="loginText">You must be logged in to view or comment on this post.</p>
+<div class="homepageButton-container">
+    <p><a class='button btn' href="/login">Log in</a></button></p>
+</div>
+{{/if}}
