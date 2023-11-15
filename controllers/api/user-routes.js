@@ -97,8 +97,12 @@ router.post('/signup', async (req, res) => {
             password: req.body.password,
         });
 
+        //find one where... the id is what we just passed in
+        //then save this to the user
+
         req.session.save(() => {
             req.session.logged_in = true;
+            req.session.user_id = dbUserData.id;
 
             res.status(200).json(dbUserData);
         });
