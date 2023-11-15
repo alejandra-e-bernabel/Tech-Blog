@@ -53,6 +53,12 @@ li {
     padding: 15px;
 }
 
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .main-header {
     background-color: black;
     display: flex;
