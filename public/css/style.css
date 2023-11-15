@@ -1,9 +1,17 @@
-*{
-    box-sizing:border-box;
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    overflow-x: hidden;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 
-    font-family: 'Agbalumo', sans-serif;}
+    font-family: 'Agbalumo', sans-serif;
+}
 
 
 body {
@@ -16,7 +24,7 @@ body {
     background-position: center center;
 }
 
-ul{
+ul {
     list-style: none;
     display: flex;
 }
@@ -42,7 +50,9 @@ li {
     display: none;
 }
 
-.loginWarning, .signupWarning, .commentWarning {
+.loginWarning,
+.signupWarning,
+.commentWarning {
     color: red;
     /* justify-content: center; */
     font-size: large;
@@ -76,9 +86,12 @@ li {
     justify-content: center;
 } */
 
-.login-header, .dashboard-header, 
-.signup-header, .homepage-header, 
-.newPost-header, .post-header,
+.login-header,
+.dashboard-header,
+.signup-header,
+.homepage-header,
+.newPost-header,
+.post-header,
 .editPost-header {
     background-color: #8c37b4;
     color: white;
@@ -115,7 +128,10 @@ main {
 
 }
 
-.dashboard-body, .homepage-body, .newPost-body, .viewPost-body {
+.dashboard-body,
+.homepage-body,
+.newPost-body,
+.viewPost-body {
     padding: 30px
 }
 
@@ -124,21 +140,27 @@ a {
     text-decoration: none;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
     text-decoration: none;
     color: inherit;
-  }
+}
 
-.loginButton-container, .signupButton-container, 
-.homepageButton-container, .newPostButton-container, 
-.dashboardButon-container, .viewPostButton-contatiner, 
+.loginButton-container,
+.signupButton-container,
+.homepageButton-container,
+.newPostButton-container,
+.dashboardButon-container,
+.viewPostButton-contatiner,
 .editPostButton-container {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.login-form, .signup-form, .editPost-form {
+.login-form,
+.signup-form,
+.editPost-form {
     padding: 20px;
 }
 
@@ -158,7 +180,8 @@ a:link, a:visited {
     font-size: large;
 }
 
-.post-container, .comment-container {
+.post-container,
+.comment-container {
     /* background-color: #FD5E8B; */
     /* padding-bottom: 10px; */
     margin-bottom: 15px;
