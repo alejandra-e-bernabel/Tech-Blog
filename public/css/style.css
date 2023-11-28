@@ -67,6 +67,11 @@ li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.postTitle {
+    overflow: hidden
 }
 
 .main-header {
@@ -77,6 +82,7 @@ li {
     /* justify-content: space-around; */
     color: white;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* .dashboard-header {
@@ -200,10 +206,14 @@ a:visited {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .postInfo {
     color: gainsboro;
+    /* border-color: #FD5E8B;
+    border-style: solid;
+    border-width: 2px; */
 }
 
 .post-body {
